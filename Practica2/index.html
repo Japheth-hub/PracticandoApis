@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+        }
+        #contenedor{
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        .caja{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            margin: 10px;
+            border: 1px solid black;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px red;
+            position: relative;
+            margin: 10px auto;
+            width: 350px;
+            height: 350px;
+        }
+        .caja h6{
+            position: absolute;
+            top: -20px;
+            right: 0;
+            margin: 20px;
+            font-size: 2rem;
+            color: rgba(0, 0, 0, 0.5);
+        }
+        .caja h1{
+            text-transform: uppercase;
+            text-align: center;
+        }
+        .caja p{
+            text-transform: capitalize;
+            text-align: center;
+        }
+
+        @media (max-width:700px) {
+            #contenedor{
+            grid-template-columns: 1fr;
+        }
+        }
+        @media (min-width:701px) and (max-width:1100px) {
+            #contenedor{
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        #paginado{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        #next, #prev{
+            margin: 5px 10px;
+            padding: 5px;
+            cursor: pointer;
+        }
+        #pagina{
+            margin: 5px 0px;
+            padding: 5px;
+            border: none;
+            background-color: black;
+            border: 1px solid black;
+            color: white;
+            font-weight: bolder;
+            cursor: pointer;
+            transition: all .2s;
+        }
+        #pagina:hover{
+            transform: scale(1.1);
+            background-color: white;
+            color: black;
+        }
+        #pagina:focus{
+            transform: scale(1.1);
+            background-color: white;
+            color: black;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div id="paginado">
+        <button id="prev">PREV</button>
+        <div id="paginas">
+            
+        </div>
+        <button id="next">NEXT</button>
+    </div>
+    <div id="contenedor">
+
+    </div>
+    <script src="practica2.js"></script>
+</body>
+</html>
